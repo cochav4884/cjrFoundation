@@ -76,14 +76,60 @@
 
     <!-- Main Content -->
     <main
-      class="d-flex justify-content-center align-items-center min-vh-100 bg-light"
+      class="main-content d-flex justify-content-center align-items-center min-vh-100 bg-light"
     >
-      <img
-        src="images/charlesRousseau.jpg"
-        class="cjr img-fluid rounded shadow"
-        alt="picture of charles rousseau"
-      />
+      <div class="text-section">
+        <h1>About CJR Foundation</h1>
+        <p>
+          The CJR Foundation is a 501(c)(3) non-profit organization dedicated to
+          supporting charitable causes and making a positive impact in our
+          community. Founded by Charles J. Rousseau, our mission is to provide
+          resources and assistance to those in need, promote education, and
+          foster community development.
+        </p>
+        <p>
+          We believe in the power of giving back and strive to create lasting
+          change through our various programs and initiatives. Our foundation
+          focuses on areas such as healthcare, education, poverty alleviation,
+          and disaster relief.
+        </p>
+        <p>
+          Join us in our mission to make a difference. Together, we can create a
+          better future for all.
+        </p>
+      </div>
+      <div class="image-section">
+        <img
+          src="images/charlesRousseau.jpg"
+          class="cjr img-fluid rounded shadow"
+          alt="picture of charles rousseau"
+          onclick="openModal(this)"
+        />
+      </div>
+
+      <!-- Modal for Enlarged Image -->
+      <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img
+          class="modal-content"
+          id="modalImage"
+          alt="Enlarged view of Charles Rousseau"
+        />
+      </div>
     </main>
+
+    <script>
+      function openModal(img) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+    </script>
 
     <!-- Footer -->
     <footer>
