@@ -1,93 +1,73 @@
 /* General Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 /* img */
 img {
-    max-width: 50px;
-    float: left;
+  max-width: 50px;
+  float: left;
+  margin-right: 10px;
 }
 
 /* Navbar container */
-.navbar {
+.navbar-custom {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
 }
 
 /* Links inside the navbar */
-.navbar a {
-  float: left;
+.navbar-custom a,
+.navbar-custom .dropdown-toggle {
   font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
+  background-color: transparent;
   border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar-custom a:hover,
+.navbar-custom .dropdown-toggle:hover {
   background-color: red;
+  color: white;
 }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
+/* Dropdown menu */
+.dropdown-menu {
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
+.dropdown-menu a {
   color: black;
   padding: 12px 16px;
-  text-decoration: none;
   display: block;
   text-align: left;
+  text-decoration: none;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-menu a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
-}   
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+}
