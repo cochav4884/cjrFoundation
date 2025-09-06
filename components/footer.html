@@ -26,21 +26,18 @@
   </head>
 
   <body>
-    <!-- Responsive Navbar -->
-    <div id="navbar"></div>
-
-    <!-- Main Content Jumbotron -->
-
-    <script>
-      async function loadComponent(id, file) {
-        const response = await fetch(file);
-        document.getElementById(id).innerHTML = await response.text();
-      }
-
-      loadComponent("navbar", "components/navbar.html");
-      loadComponent("footer", "components/footer.html");
-    </script>
+   
     <!-- Footer -->
-    <div id="footer"></div>
+    <footer>
+      <p>&copy; 2024 CJR Foundation. All rights reserved.</p>
+      <a
+        href="https://cjrFoundation.org"
+        title="Visit our Facebook page"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+      </a>
+    </footer>
   </body>
 </html>

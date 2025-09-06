@@ -27,52 +27,7 @@
 
   <body>
     <!-- Responsive Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img
-            src="images/cjrCharitableFoundationLogo.jpg"
-            alt="CJR Foundation Logo"
-            class="logo-img me-2"
-          />
-          CJR Foundation
-        </a>
-
-        <!-- Hamburger toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Collapsible nav items -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resources.html">Resources</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="photos.html">Photos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar"></div>
 
     <!-- Main Content Jumbotron -->
     <div>
@@ -104,17 +59,16 @@
       </div>
     </div>
 
+    <script>
+      async function loadComponent(id, file) {
+        const response = await fetch(file);
+        document.getElementById(id).innerHTML = await response.text();
+      }
+
+      loadComponent("navbar", "components/navbar.html");
+      loadComponent("footer", "components/footer.html");
+    </script>
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 CJR Foundation. All rights reserved.</p>
-      <a
-        href="https://cjrFoundation.org"
-        title="Visit our Facebook page"
-        target="_blank"
-        rel="noopener"
-      >
-        <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
-      </a>
-    </footer>
+    <div id="footer"></div>
   </body>
 </html>

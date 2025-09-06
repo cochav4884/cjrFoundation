@@ -1,8 +1,21 @@
 /* General Styles */
+html,
 body {
   margin: 0;
+  height: 100%;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 60px; /* Adjust based on your navbar height */
 }
 
 /* img */
@@ -14,12 +27,18 @@ img {
 
 /* Navbar container */
 .navbar-custom {
-  overflow: hidden;
+  position: sticky; /* Make it stick */
+  top: 0; /* Align to top */
+  overflow: hidden  ;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's on top of everything */
   background-color: #333;
   font-family: Arial;
   padding: 10px 20px;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 5px #000000a0; /* Optional shadow for depth */
 }
 
 /* Links inside the navbar */
@@ -66,11 +85,11 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: relative;
   bottom: 0;
   width: 100%;
   margin-top: 20px;
 }
+
 /* Jumbotron styles */
 .jumbotron {
   background-color: #9a92c6;
@@ -219,11 +238,11 @@ footer {
   display: block;
   margin: auto;
   width: auto;
-  max-width: 90vw;   /* No wider than 90% of viewport width */
-  max-height: 80vh;  /* No taller than 80% of viewport height */
+  max-width: 90vw; /* No wider than 90% of viewport width */
+  max-height: 80vh; /* No taller than 80% of viewport height */
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  object-fit: contain;  /* Keeps image aspect ratio */
+  object-fit: contain; /* Keeps image aspect ratio */
 }
 
 .modal-close {
@@ -241,7 +260,6 @@ footer {
   color: #ccc;
 }
 
-
 /* Carousel Images */
 .carousel-inner img {
   width: 100%;
@@ -252,18 +270,17 @@ footer {
 }
 
 .img-fluid {
-    max-width: 250px;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    align-items: center;
-    margin-right: 0;
-}  
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  align-items: center;
+  margin-right: 0;
+}
 
 /* Carousel Indicators */
 .carousel-indicators button {
   background-color: #000000; /* black for inactive */
-
 }
 
 .carousel-indicators .active {
@@ -285,12 +302,17 @@ footer {
 
 /* Overlay container for contact info */
 .overlay-container {
-  background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White with slight transparency */
   padding: 30px;
   border-radius: 8px;
   max-width: 600px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  opacity: 0.80;
+  opacity: 0.8;
 }
 
 .overlay-container h1 {
@@ -307,8 +329,31 @@ footer {
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* resource.html */
+.resource-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resource-list li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.resource-list li a:hover {
+  text-decoration: underline;
 }
