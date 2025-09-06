@@ -1,0 +1,43 @@
+/* Sticky Navbar */
+.navbar-custom {
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* Above content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo image */
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  padding: 10px 16px;
+  color: #fff !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: red;
+  color: #fff !important;
+  border-radius: 4px;
+}
+
+/* Mobile collapse background */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #222;
+    padding: 10px;
+  }
+}
+.navbar-collapse .nav-link {
+  color: #fff !important;
+}
+.navbar-collapse .nav-link:hover {
+  background-color: red;
+  color: #fff !important;
+}
