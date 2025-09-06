@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>CJR Foundation Home</title>
+    <title>CJR Foundation | Mission</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/resource.css" />
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -26,19 +26,62 @@
   </head>
 
   <body>
-    <!-- Responsive Navbar -->
+    <!-- Navbar -->
     <div id="navbar"></div>
-    <!-- Main Content Jumbotron -->
-    <div>
-      <div class="jumbotron text-center bg-light p-5">
-        <h1 class="display-4">Our Mission</h1>
-        <p class="lead mt-3">
-          The CJR Charitable Foundation is dedicated to improving the lives of
-          individuals and families affected by essential tremor through support,
-          education, and advocacy.
+
+    <!-- Hero / Parallax Section -->
+    <section class="parallax">
+      <div class="parallax-content">
+        <h1>Our Mission</h1>
+        <p>
+          The CJR Foundation, established on June 13, 2025, was created in honor
+          of our founder’s grandfather, who bravely lived with essential tremors.
+          His journey inspires our mission: to bring awareness, compassion, and
+          resources to individuals and families facing this condition every day.
         </p>
+        <p>
+          We believe no one should feel alone in their experience. By sharing
+          stories, offering resources, and supporting research, we hope to make
+          a lasting impact in the lives of those affected.
+        </p>
+        <a href="resources.html" class="btn btn-danger btn-lg mt-3">
+          <i class="fa-solid fa-hands-helping me-2"></i> Explore Resources
+        </a>
       </div>
-    </div>
+    </section>
+
+    <!-- Mission Focus Areas -->
+    <section class="container my-5">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="fa-solid fa-lightbulb fa-3x text-danger mb-3"></i>
+          <h3>Awareness</h3>
+          <p>
+            Educating communities about essential tremor to reduce stigma and
+            promote early understanding.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fa-solid fa-heart fa-3x text-danger mb-3"></i>
+          <h3>Support</h3>
+          <p>
+            Offering compassion and resources for families and caregivers who
+            walk this journey alongside loved ones.
+          </p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fa-solid fa-microscope fa-3x text-danger mb-3"></i>
+          <h3>Advocacy</h3>
+          <p>
+            Supporting research and raising our collective voice to improve care
+            and find better treatments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
 
     <script>
       async function loadComponent(id, file) {
@@ -49,7 +92,5 @@
       loadComponent("navbar", "components/navbar.html");
       loadComponent("footer", "components/footer.html");
     </script>
-    <!-- Footer -->
-    <div id="footer"></div>
   </body>
 </html>

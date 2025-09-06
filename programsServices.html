@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>CJR Foundation Home</title>
+    <title>CJR Foundation | Programs & Services</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/resource.css" />
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -26,34 +26,95 @@
   </head>
 
   <body>
-    <!-- Responsive Navbar -->
+    <!-- Navbar -->
     <div id="navbar"></div>
 
-    <!-- Main Content Jumbotron -->
-    <div>
-      <div class="jumbotron text-center bg-light p-5">
-        <h1 class="display-4">Programs & Services</h1>
-        <p class="lead mt-3">
-          The CJR Foundation offers a variety of programs and services to
-          support individuals and families affected by essential tremor. Explore
-          our offerings below.
+    <!-- Hero / Parallax Section -->
+    <section class="parallax">
+      <div class="parallax-content">
+        <h1>Programs & Services</h1>
+        <p>
+          The CJR Foundation offers a variety of programs and services designed
+          to support individuals and families affected by essential tremor.
         </p>
         <p>
-          - Support Groups: Join our local and online support groups to connect
-          with others who understand your journey.<br />
-          - Educational Workshops: Attend workshops led by medical professionals
-          to learn more about managing essential tremor.<br />
-          - Advocacy Initiatives: Get involved in advocacy efforts to raise
-          awareness and influence policy.<br />
-          - Resource Library: Access a wealth of information and resources on
-          essential tremor.<br />
-          - Financial Assistance: Learn about programs that may help with
-          treatment costs.<br />
-          - Community Events: Participate in events that bring together the
-          essential tremor community for support and fun.
+          Our goal is to provide education, emotional support, and advocacy
+          opportunities to help every member of our community live confidently
+          and stay informed.
         </p>
+        <p>Below are some of the key programs and services we offer:</p>
+        <a href="resources.html" class="btn btn-danger btn-lg mt-3">
+        <i class="fa-solid fa-hands-helping me-2"></i> Explore Resources
+      </a>
       </div>
-    </div>
+
+      
+    </section>
+
+    <!-- Program Cards -->
+    <section class="container my-5">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-users fa-2x text-danger"></i>
+            <h3>Support Groups</h3>
+            <p>
+              Join local and online support groups to connect with others who
+              understand your journey.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-chalkboard-teacher fa-2x text-danger"></i>
+            <h3>Educational Workshops</h3>
+            <p>
+              Attend workshops led by medical professionals to learn more about
+              managing essential tremor.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-bullhorn fa-2x text-danger"></i>
+            <h3>Advocacy Initiatives</h3>
+            <p>
+              Get involved in advocacy efforts to raise awareness and influence
+              policy.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-book-open fa-2x text-danger"></i>
+            <h3>Resource Library</h3>
+            <p>
+              Access a wealth of information and resources on essential tremor.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-dollar-sign fa-2x text-danger"></i>
+            <h3>Financial Assistance</h3>
+            <p>Learn about programs that may help with treatment costs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-calendar-check fa-2x text-danger"></i>
+            <h3>Community Events</h3>
+            <p>
+              Participate in events that bring together the essential tremor
+              community for support and fun.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
 
     <script>
       async function loadComponent(id, file) {
@@ -64,7 +125,5 @@
       loadComponent("navbar", "components/navbar.html");
       loadComponent("footer", "components/footer.html");
     </script>
-    <!-- Footer -->
-    <div id="footer"></div>
   </body>
 </html>

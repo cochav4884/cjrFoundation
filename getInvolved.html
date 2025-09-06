@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>CJR Foundation Home</title>
+    <title>CJR Foundation | Get Involved</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/resource.css" />
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -26,22 +26,99 @@
   </head>
 
   <body>
-    <!-- Responsive Navbar -->
+    <!-- Navbar -->
     <div id="navbar"></div>
 
-    <!-- Main Content Jumbotron -->
-    <div>
-        <div class="jumbotron text-center bg-light p-5">
-            <h1 class="display-4">Get Involved</h1>
-            <p class="lead mt-3">
-            There are many ways to get involved with the CJR Foundation. Whether
-            you want to volunteer, donate, or participate in our events, we welcome
-            your support!
-            </p>
-        </div>
-    </div>
+    <!-- Hero / Parallax Section -->
+    <section class="parallax">
+      <div class="parallax-content">
+        <h1>Get Involved</h1>
+        <p>
+          There are many ways to support the CJR Foundation. Whether you want to
+          volunteer, donate, or participate in our events, we welcome your help
+          in raising awareness and assisting families affected by essential
+          tremor.
+        </p>
+        <a href="resources.html" class="btn btn-danger btn-lg mt-3">
+          <i class="fa-solid fa-hands-helping me-2"></i> Explore Resources
+        </a>
+      </div>
+    </section>
 
-   <script>
+    <!-- Involvement Cards -->
+    <section class="container my-5">
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="awareness-card">
+            <i class="fa-solid fa-hands-helping fa-2x text-danger"></i>
+            <h3>Volunteer</h3>
+            <p>
+              Join our team to help organize events, run support groups, or
+              assist with community outreach programs. Your time can make a
+              difference!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="support-card">
+            <i class="fa-solid fa-donate fa-2x text-danger"></i>
+            <h3>Donate</h3>
+            <p class="lead mt-3">
+              Your generous donations help us continue our mission to support
+              individuals and families affected by essential tremor. Every
+              contribution makes a difference!
+            </p>
+            <p>
+              <a
+                href="https://my.waveapps.com/register/"
+                class="btn btn-lg"
+                target="_blank"
+                rel="noopener"
+                >Wave App</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-calendar-check fa-2x text-danger"></i>
+            <h3>Participate in Events</h3>
+            <p>
+              Attend fundraising and community events to connect with the
+              essential tremor community, share experiences, and support our
+              mission.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-bullhorn fa-2x text-danger"></i>
+            <h3>Advocate</h3>
+            <p>
+              Help raise awareness by sharing information, participating in
+              campaigns, and supporting advocacy initiatives for essential
+              tremor research and resources.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="mission-card">
+            <i class="fa-solid fa-hand-holding-heart fa-2x text-danger"></i>
+            <h3>Mentorship</h3>
+            <p>
+              Offer guidance and encouragement to individuals and families
+              navigating essential tremor. Your experience can help others feel
+              supported.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
       async function loadComponent(id, file) {
         const response = await fetch(file);
         document.getElementById(id).innerHTML = await response.text();
@@ -50,8 +127,5 @@
       loadComponent("navbar", "components/navbar.html");
       loadComponent("footer", "components/footer.html");
     </script>
-    <!-- Footer -->
-    <div id="footer"></div>
-    </footer>
   </body>
 </html>

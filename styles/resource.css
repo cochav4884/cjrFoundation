@@ -1,4 +1,4 @@
-/* resource.html */
+/* ------------------- Resource List ------------------- */
 .resource-list {
   list-style-type: none;
   padding: 0;
@@ -30,9 +30,9 @@
   color: #ff4444; /* matches hover accent */
 }
 
-/* For parallax overlay version */
+/* ------------------- Parallax Section ------------------- */
 .parallax {
-  background-image: url("../images/fourthOfJuly.jpg"); /* background set via CSS */
+  background-image: url("../images/fourthOfJuly.jpg");
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -74,32 +74,64 @@
   margin-bottom: 30px;
 }
 
-.parallax .resource-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.parallax .resource-list li {
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-  padding: 12px 16px;
-  border-radius: 6px;
-  margin: 8px auto;
-  max-width: 400px;
-}
-
-.parallax .resource-list li a {
-  color: #000;
-  font-size: 1.1rem;
+.parallax-content .btn {
+  background-color: #ff4444;
+  border: none;
   font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.parallax .resource-list li a:hover {
-  color: #ff4444;
+.parallax-content .btn:hover {
+  background-color: #e03636;
+  transform: translateY(-2px);
+  color: #fff;
 }
 
-/* Optional image styling (not needed if using CSS background) */
+/* ------------------- Unified Card Styles ------------------- */
+.mission-card,
+.awareness-card,
+.support-card {
+  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mission-card:hover,
+.awareness-card:hover,
+.support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mission-card h3,
+.awareness-card h3,
+.support-card h3 {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.mission-card p,
+.awareness-card p,
+.support-card p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Optional top border accents for differentiation */
+.awareness-card {
+  border-top: 4px solid #ff4444;
+}
+
+.support-card {
+  border-top: 4px solid #2196f3;
+}
+
+/* ------------------- Optional Image Styling ------------------- */
 .bg-image {
   max-width: 100%;
   height: auto;
@@ -109,4 +141,14 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 767px) {
+  .parallax-content h1 {
+    font-size: 2rem;
+  }
+  .parallax-content p {
+    font-size: 1rem;
+  }
 }
