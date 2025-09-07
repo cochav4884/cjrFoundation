@@ -6,7 +6,7 @@
 }
 
 .resource-list li {
-  background-color: #fff;
+  background-color: rgb(246, 243, 235);
   margin-bottom: 10px;
   padding: 15px;
   border-radius: 5px;
@@ -27,7 +27,7 @@
 
 .resource-list li a:hover {
   text-decoration: underline;
-  color: #ff4444; /* matches hover accent */
+  color: rgb(52, 93, 47); /* matches hover accent */
 }
 
 /* ------------------- Parallax Section ------------------- */
@@ -58,7 +58,7 @@
 
 .parallax-content {
   position: relative;
-  color: #fff;
+  color: rgb(246, 243, 235);
   max-width: 900px;
   padding: 20px;
   z-index: 1;
@@ -75,7 +75,7 @@
 }
 
 .parallax-content .btn {
-  background-color: #ff4444;
+  background-color: rgb(52, 93, 47);
   border: none;
   font-weight: 600;
   padding: 12px 30px;
@@ -84,16 +84,16 @@
 }
 
 .parallax-content .btn:hover {
-  background-color: #e03636;
+  background-color: rgb(246, 243, 235);
   transform: translateY(-2px);
-  color: #fff;
+  color: #000;
 }
 
 /* ------------------- Unified Card Styles ------------------- */
 .mission-card,
 .awareness-card,
 .support-card {
-  background-color: rgb(112, 177, 103); /* semi-transparent white */
+  background-color: rgb(246, 243, 235); /* semi-transparent white */
   padding: 25px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -123,7 +123,8 @@
 }
 
 main {
-  background-color: rgb(246, 237, 211);
+  background-color: rgb(52, 93, 47, 0.8);
+  padding: 10px;
 }
 
 /* ------------------- Optional Image Styling ------------------- */
