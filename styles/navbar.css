@@ -1,9 +1,13 @@
 /* Sticky Navbar */
 .navbar-custom {
-  position: sticky;
+  position: fixed;   /* fixed to top */
   top: 0;
-  z-index: 1020; /* Above content */
+  width: 100%;
+  z-index: 1020;     /* above content */
+  background-color: #333;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  color: #fff;
 }
 
 /* Logo image */
@@ -33,11 +37,9 @@
     background-color: #222;
     padding: 10px;
   }
-}
-.navbar-collapse .nav-link {
-  color: #fff !important;
-}
-.navbar-collapse .nav-link:hover {
-  background-color: red;
-  color: #fff !important;
+
+  .navbar-collapse .nav-link:hover {
+    background-color: red;
+    color: #fff !important;
+  }
 }
