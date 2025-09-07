@@ -93,7 +93,7 @@
 .mission-card,
 .awareness-card,
 .support-card {
-  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+  background-color: rgb(112, 177, 103); /* semi-transparent white */
   padding: 25px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -122,13 +122,8 @@
   color: #555;
 }
 
-/* Optional top border accents for differentiation */
-.awareness-card {
-  border-top: 4px solid #ff4444;
-}
-
-.support-card {
-  border-top: 4px solid #2196f3;
+main {
+  background-color: rgb(246, 237, 211);
 }
 
 /* ------------------- Optional Image Styling ------------------- */
