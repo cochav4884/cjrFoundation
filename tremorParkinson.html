@@ -6,9 +6,6 @@
 
     <title>CJR Foundation Tremors vs Parkinsons</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/tremorParkinson.css" />
-
     <!-- Bootstrap 5 CSS -->
     <link
       rel="stylesheet"
@@ -21,113 +18,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/tremorParkinson.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <body>
+  <body class="page-layout">
     <!-- Responsive Navbar -->
     <div id="navbar"></div>
 
     <!-- Main Content -->
     <main>
-      <section class="resources-section py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Tremors vs. Parkinson’s Disease</h2>
-          <p class="text-center lead mb-5">
-            While tremors are a symptom of several conditions, including
-            Parkinson’s disease, essential tremor is a separate neurological
-            condition. These resources help explain the differences, symptoms,
-            and treatments.
-          </p>
-
-          <div class="row g-4">
-            <!-- Resource Card 1 -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">
-                    <i class="bi bi-patch-question text-primary me-2"></i>
-                    Mayo Clinic
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Explains the differences between essential tremor and
-                    Parkinson’s disease, including how tremors present and
-                    progress.
-                  </p>
-                  <div class="text-center mt-auto">
-                    <a
-                      href="https://www.mayoclinic.org/diseases-conditions/essential-tremor/expert-answers/essential-tremor-vs-parkinsons/faq-20455813"
-                      target="_blank"
-                      rel="noopener"
-                      class="btn btn-outline-primary"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Resource Card 2 -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">
-                    <i class="bi bi-heartbeat text-success me-2"></i>
-                    Parkinson’s Foundation
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Offers educational material on tremors in Parkinson’s
-                    disease versus essential tremor and practical tips for
-                    patients and families.
-                  </p>
-                  <div class="text-center mt-auto">
-                    <a
-                      href="https://www.parkinson.org/Understanding-Parkinsons/Symptoms/Tremor"
-                      target="_blank"
-                      rel="noopener"
-                      class="btn btn-outline-success"
-                    >
-                      Explore
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Resource Card 3 -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 shadow-sm border-0">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">
-                    <i class="bi bi-book text-info me-2"></i>
-                    National Institute of Neurological Disorders and Stroke
-                    (NINDS)
-                  </h5>
-                  <p class="card-text flex-grow-1">
-                    Describes essential tremor and Parkinson’s tremor, including
-                    causes, diagnosis, and treatment options.
-                  </p>
-                  <div class="text-center mt-auto">
-                    <a
-                      href="https://www.ninds.nih.gov/health-information/disorders/essential-tremor"
-                      target="_blank"
-                      rel="noopener"
-                      class="btn btn-outline-info"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Flip Cards Section -->
-      <section class="resources-section py-5 bg-light">
+      <!-- Resource Section -->
+      <section class="tremorParkinson-section py-5">
         <div class="container">
           <h2 class="text-center mb-4">Tremors vs. Parkinson’s Disease</h2>
           <p class="text-center lead mb-4">
@@ -139,82 +45,89 @@
           </p>
 
           <div class="row g-4 justify-content-center">
-            <!-- Flip Card 1 -->
+            <!-- Combined Card 1 -->
             <div class="col-md-4">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <!-- Front -->
-                  <div class="flip-card-front">
-                    <img
-                      src="images/tremor4flipcard.jpg"
-                      alt="Essential Tremor"
-                    />
-                    <div class="flip-card-front-overlay">
-                      <h5>Essential Tremor</h5>
-                    </div>
-                  </div>
-                  <!-- Back -->
-                  <div class="flip-card-back">
-                    <h5>Essential Tremor</h5>
-                    <p>
-                      Action tremors that worsen with movement. Can affect the
-                      hands, head, or voice. Often hereditary and progresses
-                      gradually.
-                    </p>
-                  </div>
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="images/tremor4flipcard.jpg"
+                  class="card-img-top"
+                  alt="Essential Tremor"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Mayo Clinic / Essential Tremor</h5>
+                  <p class="card-text">
+                    Explains the differences between essential tremor and
+                    Parkinson’s disease, including how tremors present and
+                    progress. Action tremors worsen with movement, can affect
+                    hands, head, or voice, often hereditary and progresses
+                    gradually.
+                  </p>
+                  <a
+                    href="https://www.mayoclinic.org/diseases-conditions/essential-tremor/expert-answers/essential-tremor-vs-parkinsons/faq-20455813"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-secondary mt-2"
+                  >
+                    Learn More
+                  </a>
                 </div>
               </div>
             </div>
 
-            <!-- Flip Card 2 -->
+            <!-- Combined Card 2 -->
             <div class="col-md-4">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <!-- Front -->
-                  <div class="flip-card-front">
-                    <img
-                      src="images/parkinson4flipcard.jpg"
-                      alt="Parkinson's Tremor"
-                    />
-                    <div class="flip-card-front-overlay">
-                      <h5>Parkinson’s Tremor</h5>
-                    </div>
-                  </div>
-                  <!-- Back -->
-                  <div class="flip-card-back">
-                    <h5>Parkinson’s Tremor</h5>
-                    <p>
-                      Resting tremors, usually start on one side, may progress
-                      with rigidity and slowed movements.
-                    </p>
-                  </div>
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="images/parkinson4flipcard.jpg"
+                  class="card-img-top"
+                  alt="Parkinson's Tremor"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    Parkinson’s Foundation / Parkinson’s Tremor
+                  </h5>
+                  <p class="card-text">
+                    Offers educational material on tremors in Parkinson’s
+                    disease versus essential tremor and practical tips for
+                    patients and families. Resting tremors usually start on one
+                    side and may progress with rigidity and slowed movements.
+                  </p>
+                  <a
+                    href="https://www.parkinson.org/Understanding-Parkinsons/Symptoms/Tremor"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-secondary mt-2"
+                  >
+                    Explore
+                  </a>
                 </div>
               </div>
             </div>
 
-            <!-- Flip Card 3 -->
+            <!-- Combined Card 3 -->
             <div class="col-md-4">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <!-- Front -->
-                  <div class="flip-card-front">
-                    <img
-                      src="images/tremorvsparkinson4flipcard.jpg"
-                      alt="Differences"
-                    />
-                    <div class="flip-card-front-overlay">
-                      <h5>Key Differences</h5>
-                    </div>
-                  </div>
-                  <!-- Back -->
-                  <div class="flip-card-back">
-                    <h5>Key Differences</h5>
-                    <p>
-                      Essential tremor is usually hereditary and action-based;
-                      Parkinson’s tremor often occurs at rest with additional
-                      motor symptoms.
-                    </p>
-                  </div>
+              <div class="card h-100 shadow-sm border-0">
+                <img
+                  src="images/tremorvsparkinson4flipcard.jpg"
+                  class="card-img-top"
+                  alt="Differences"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">NINDS / Key Differences</h5>
+                  <p class="card-text">
+                    Describes essential tremor and Parkinson’s tremor, including
+                    causes, diagnosis, and treatment options. Essential tremor
+                    is usually hereditary and action-based; Parkinson’s tremor
+                    often occurs at rest with additional motor symptoms.
+                  </p>
+                  <a
+                    href="https://www.ninds.nih.gov/health-information/disorders/essential-tremor"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-secondary mt-2"
+                  >
+                    Read More
+                  </a>
                 </div>
               </div>
             </div>
