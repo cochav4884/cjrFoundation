@@ -1,4 +1,10 @@
+/* photos.html */
+body {
+  background-color: rgb(246, 243, 235);
+}
+
 .carousel-container {
+  background-color: rgba(52, 93, 47, 0.5);
   max-width: 1200px;
   margin: 40px auto;
   overflow: hidden;
