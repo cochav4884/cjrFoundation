@@ -6,9 +6,6 @@
 
     <title>CJR Foundation About</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/about.css" />
-
     <!-- Bootstrap 5 CSS -->
     <link
       rel="stylesheet"
@@ -21,6 +18,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
+    <!-- Index CSS (if you need global site styles) -->
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <!-- ✅ Scoped About CSS (LAST) -->
+    <link rel="stylesheet" href="styles/about.css" />
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
@@ -30,34 +33,45 @@
     <div id="navbar"></div>
 
     <!-- Main Content -->
-    <main class="main-content bg-light">
+    <main class="main-content">
       <div class="text-section">
         <h1>About CJR Foundation</h1>
 
         <!-- Profile Cards -->
-        <div class="row">
+        <div class="profile-row">
           <div class="card">
-            <img src="images/c.jpg" alt="Eric" class="profile-img" />
+            <img src="images/maleEmployee.jpg" alt="Eric" class="profile-img"/>
             <h1>Eric Dodier</h1>
             <p class="title">CEO & Founder, CJR Foundation</p>
-            <p>Eric founded this foundation in honor of his grandfather Charles J Rousseau</p>
-            <p><a href="contact.html"><button>Contact</button></a></p>
+            <p>
+              Eric founded this foundation in honor of his grandfather Charles J
+              Rousseau.
+            </p>
+            <p><a href="contact.html"><button class="btn btn-secondary mt-auto">Contact</button></a></p>
           </div>
 
           <div class="card">
-            <img src="images/c.jpg" alt="Eric" class="profile-img" />
-            <h1>Eric Dodier</h1>
-            <p class="title">CEO & Founder, CJR Foundation</p>
-            <p>Eric founded this foundation in honor of his grandfather Charles J Rousseau</p>
-            <p><a href="contact.html"><button>Contact</button></a></p>
+            <img
+              src="images/femaleEmployee.jpg"
+              alt="Hannah"
+              class="profile-img"
+            />
+            <h1>Hannah Gilpatrick</h1>
+            <p class="title">Director, CJR Foundation</p>
+            <p>Hannah is your go-to girl if you have questions!</p>
+            <p><a href="contact.html"><button class="btn btn-secondary mt-auto">Contact</button></a></p>
           </div>
 
           <div class="card">
-            <img src="images/c.jpg" alt="Eric" class="profile-img" />
-            <h1>Eric Dodier</h1>
-            <p class="title">CEO & Founder, CJR Foundation</p>
-            <p>Eric founded this foundation in honor of his grandfather Charles J Rousseau</p>
-            <p><a href="contact.html"><button>Contact</button></a></p>
+            <img
+              src="images/femaleEmployee2.jpg"
+              alt="Zuri"
+              class="profile-img"
+            />
+            <h1>Zuri Williams</h1>
+            <p class="title">Media</p>
+            <p>Zuri heads our donations and reach-out programs.</p>
+            <p><a href="contact.html"><button class="btn btn-secondary mt-auto">Contact</button></a></p>
           </div>
         </div>
 
@@ -86,7 +100,7 @@
         <img
           src="images/charlesRousseau.jpg"
           class="cjr img-fluid rounded shadow"
-          alt="picture of charles rousseau"
+          alt="picture of Charles Rousseau"
           onclick="openModal(this)"
         />
       </div>
@@ -102,10 +116,14 @@
       </div>
     </main>
 
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
     <script>
       function openModal(img) {
-        var modal = document.getElementById("imageModal");
-        var modalImg = document.getElementById("modalImage");
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
         modal.style.display = "block";
         modalImg.src = img.src;
       }
@@ -122,9 +140,5 @@
       loadComponent("navbar", "components/navbar.html");
       loadComponent("footer", "components/footer.html");
     </script>
-
-    <!-- Footer -->
-    <div id="footer"></div>
   </body>
 </html>
- 

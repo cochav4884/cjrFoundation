@@ -1,4 +1,16 @@
-/* Sticky Navbar */
+/* ======================= */
+/* Sticky Navbar            */
+/* ======================= */
+
+/* Navbar container */
+#navbar {
+  position: fixed;       /* stick to top */
+  top: 0;
+  width: 100%;
+  z-index: 1020;         /* stay above content */
+  background-color: rgb(52, 93, 47); /* match your brand color */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
 
 /* Logo image */
 .logo-img {
@@ -15,16 +27,25 @@
   transition: background-color 0.3s ease;
 }
 
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important;
+}
+
 /* Mobile collapse background */
 @media (max-width: 991px) {
   .navbar-collapse {
-    background-color: none;
+    background-color: rgb(52, 93, 47); /* dark green on mobile menu */
     text-align: center;
     padding: 10px;
   }
 
   .navbar-collapse .nav-link:hover {
-    background-color: rgb(52, 93, 47);
+    background-color: rgb(45, 80, 42);
     color: #fff !important;
   }
+}
+
+/* Add space for fixed navbar */
+body.page-layout {
+  padding-top: 60px; /* adjust if navbar height changes */
 }

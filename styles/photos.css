@@ -3,6 +3,11 @@ body {
   background-color: rgb(246, 243, 235);
 }
 
+main {
+  padding: 20px;
+  margin-top: 60px;
+}
+
 .carousel-container {
   background-color: rgba(52, 93, 47, 0.5);
   max-width: 1200px;

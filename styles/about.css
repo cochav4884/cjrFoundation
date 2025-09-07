@@ -1,100 +1,108 @@
-/* Main content stacked vertically */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #cc6b09;
-}
+/* ================================ */
+/* About Page Styles (Scoped)       */
+/* ================================ */
+
 .main-content {
   display: flex;
-  flex-direction: column; /* stack text + image vertically */
+  flex-direction: column;
   gap: 40px;
   padding: 40px;
+  background-color: rgb(246, 243, 235);
+  margin-top: 60px;
 }
 
-/* Text section fills width */
-.text-section {
+/* Text Section */
+.main-content .text-section {
   width: 100%;
   text-align: center;
 }
 
-/* Profile cards row (horizontal & responsive) */
-.row {
+/* Profile Cards Row */
+.main-content .profile-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: rgba(52, 93, 47, 0.6);
+  border-radius: 10px;
 }
 
-/* Card sizing */
-.card {
-  flex: 0 1 300px; /* do not grow, shrink if needed, base width 300px */
+/* Individual Cards */
+.main-content .profile-row .card {
+  flex: 300px;
   max-width: 300px;
   width: 100%;
   box-sizing: border-box;
   margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 4px rgba(0,0,0);
   text-align: center;
-  padding: 15px;
+  padding: 0; /* remove padding so image fills top fully */
   border-radius: 10px;
+  overflow: hidden; /* clip image to rounded corners */
 }
 
-/* Profile card image */
-.card img.profile-img {
+/* Profile Images - fill top portion of card */
+.main-content .profile-row .card img.profile-img {
   width: 100%;
-  height: auto;
-  max-height: 200px; /* smaller height for images */
-  object-fit: cover;
-  border-radius: 10px;
+  height: 200px;           /* fixed top portion */
+  object-fit: cover;       /* crop and fill */
+  display: block;
 }
 
-/* Card title */
-.title {
+/* Card Content */
+.main-content .profile-row .card h1,
+.main-content .profile-row .card .title,
+.main-content .profile-row .card p,
+.main-content .profile-row .card button {
+  padding: 10px 15px;
+}
+
+/* Card Titles */
+.main-content .profile-row .card .title {
   color: grey;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Buttons */
-button {
+/* Buttons inside cards */
+.main-content .profile-row .card button {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: calc(100% - 30px); /* match padding */
   font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
+.main-content .profile-row .card button:hover {
   opacity: 0.7;
 }
 
-/* Image section centered horizontally */
-.image-section {
+/* Main Image Section */
+.main-content .image-section {
   display: flex;
   justify-content: center;
 }
 
-/* Main image styling */
-.cjr.img-fluid {
+/* Main CJR Image */
+.main-content .image-section .cjr.img-fluid {
   width: 100%;
-  height: auto;      /* scale proportionally */
-  max-width: 600px;  /* optional limit for large screens */
+  height: auto;
+  max-width: 600px;
   object-fit: cover;
   cursor: zoom-in;
 }
 
-/* Modal for enlarged image */
-.modal {
+/* Modal */
+.main-content .modal {
   display: none;
   position: fixed;
   z-index: 9999;
@@ -107,7 +115,7 @@ button:hover, a:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-content {
+.main-content .modal-content {
   display: block;
   margin: auto;
   width: auto;
@@ -118,7 +126,7 @@ button:hover, a:hover {
   object-fit: contain;
 }
 
-.modal-close {
+.main-content .modal-close {
   position: absolute;
   top: 30px;
   right: 40px;
@@ -129,35 +137,38 @@ button:hover, a:hover {
   z-index: 10000;
 }
 
-.modal-close:hover {
+.main-content .modal-close:hover {
   color: #ccc;
 }
 
-/* Responsive adjustments for mobile */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .cjr.img-fluid {
-    max-width: 100%;   /* fill container */
-    height: auto;      /* keep aspect ratio */
-    min-height: 300px; /* ensures image isn’t too short */
+  .main-content .image-section .cjr.img-fluid {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
   }
 
-
-  .row {
-    gap: 10px; /* reduce gap between cards */
+  .main-content .profile-row {
+    gap: 10px;
     margin-top: 10px;
   }
 
-  .card img.profile-img {
-    max-height: 150px; /* smaller image for mobile */
+  .main-content .profile-row .card img.profile-img {
+    height: 150px;
   }
 }
 
 @media (max-width: 600px) {
-  .image-section {
+  .main-content .image-section {
     justify-content: center;
   }
 
-  .cjr.img-fluid {
+  .main-content .profile-row .card img.profile-img {
+    height: 120px;
+  }
+
+  .main-content .image-section .cjr.img-fluid {
     max-height: 300px;
   }
 }

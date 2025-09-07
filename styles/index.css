@@ -110,12 +110,39 @@ img {
 .jumbotron-footer img {
   max-width: 150px; /* adjust size as needed */
   height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgb(0,0,0);
 }
 
+/* Intro Section */
+.intro-section {
+  margin-bottom: 0;
+}
+
+.intro-picture {
+  background-color: rgba(52, 93, 47, 0.6);
+  padding: 30px;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  display: flex;               /* make container flex */
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically (optional) */
+}
+
+.intro-picture .img-fluid {
+  max-height: 400px;
+  width: 80%;
+  object-fit: cover;
+  box-shadow: 2px 2px 4px rgb(0,0,0);
+  margin: 0;                   /* remove extra margins */
+}
 
 /* Overlay container */
 .overlay-container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(52, 93, 47, 0.6);
   padding: 30px;
   border-radius: 8px;
   max-width: 600px;
@@ -147,7 +174,7 @@ h1 {
 
 /* Tremor Resources Section */
 .resources-section {
-  background-color: #f9fbfd;
+  background-color: rgba(52, 93, 47, 0.6);
   padding: 60px 0;
 }
 
@@ -156,20 +183,24 @@ h1 {
   color: #2c3e50;
 }
 
+/* Force box-shadow on all cards */
 .resources-section .card {
   border-radius: 1rem;
+  box-shadow: 2px 2px 4px rgb(0,0,0) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .resources-section .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3) !important; /* slightly stronger on hover */
 }
 
 .resources-section .btn {
   border-radius: 50px;
+  align-items: center;
 }
 
 .btn {
-  align-items: center;
+  box-shadow: 2px 2px 4px rgb(0,0,0);
 }
+

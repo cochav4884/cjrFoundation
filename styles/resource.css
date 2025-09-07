@@ -6,28 +6,25 @@
 }
 
 .resource-list li {
-  background-color: rgb(246, 243, 235);
-  margin-bottom: 10px;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.resource-list li:hover {
-  transform: translateY(-3px);
+  margin-bottom: 15px; /* spacing between items */
 }
 
 .resource-list li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
   display: block;
+  padding: 15px 20px;
+  background-color: rgb(52, 93, 47, 0.8);
+  color: rgb(246, 243, 235);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .resource-list li a:hover {
+  transform: translateY(-3px);
+  background-color: rgb(52, 93, 47); /* slightly darker */
   text-decoration: underline;
-  color: rgb(52, 93, 47); /* matches hover accent */
 }
 
 /* ------------------- Parallax Section ------------------- */
@@ -74,21 +71,6 @@
   margin-bottom: 30px;
 }
 
-.parallax-content .btn {
-  background-color: rgb(52, 93, 47);
-  border: none;
-  font-weight: 600;
-  padding: 12px 30px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.parallax-content .btn:hover {
-  background-color: rgb(246, 243, 235);
-  transform: translateY(-2px);
-  color: #000;
-}
-
 /* ------------------- Unified Card Styles ------------------- */
 .mission-card,
 .awareness-card,
@@ -125,6 +107,7 @@
 main {
   background-color: rgb(52, 93, 47, 0.8);
   padding: 10px;
+  margin-top: 60px;
 }
 
 /* ------------------- Optional Image Styling ------------------- */
