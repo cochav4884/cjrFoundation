@@ -6,11 +6,6 @@
 
     <title>Privacy Policy</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/privacyPolicy.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/navbar.css" />
-
     <!-- Bootstrap 5 CSS -->
     <link
       rel="stylesheet"
@@ -23,26 +18,36 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./styles/privacyPolicy.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
   </head>
+
   <body class="page-layout">
     <!-- Responsive Navbar -->
     <div id="navbar"></div>
 
+    <header>
+      <h1 class="page-header text-center">
+        Charles J. Rousseau Charitable Foundation
+      </h1>
+    </header>
+
+    <h2 class="section text-center">* Privacy Policy *</h2>
+
+    <!-- Table of Contents -->
     <div class="main_container">
-      <div class="container-fluid">
-        <header>
-          <h1 class="page-header">Charles J. Rousseau Charitable Foundation</h1>
-        </header>
-
-        <h2 class="section">* Privacy Policy *</h2>
-
+      <div class="container-mt-5">
         <div id="top" aria-label="Top of Page" tabindex="-1"></div>
-        <h2 class="section text-dark">* Table of Contents *</h2>
+        <h2 class="section text-dark text-center">* Table of Contents *</h2>
         <ul class="container">
-          <li><a class="btn-link" href="#S01">Privacy Policy</a></li>
-          <li><a class="btn-link" href="#S02">Coverage</a></li>
+          <li>
+            <a class="btn-link" href="#S01">Privacy Policy</a>
+          </li>
+          <li>
+            <a class="btn-link" href="#S02">Coverage</a>
+          </li>
           <li>
             <a class="btn-link" href="#S03"
               >Definitions of Types of Information</a
@@ -61,7 +66,9 @@
               >Do Not Sell My Personal Information</a
             >
           </li>
-          <li><a class="btn-link" href="#S07">Updates to this Policy</a></li>
+          <li>
+            <a class="btn-link" href="#S07">Updates to this Policy</a>
+          </li>
           <li>
             <a class="btn-link" href="#S08"
               >Intellectual Property and Content Ownership</a
@@ -70,7 +77,7 @@
           <li><a class="btn-link" href="#S09">Contact</a></li>
         </ul>
 
-        <h3>* Last updated August 1, 2025 *</h3>
+        <h3 class="text-center">* Last updated September 10, 2025 *</h3>
 
         <div class="container">
           <p>
@@ -219,7 +226,7 @@
               </p>
               <p class="text">
                 Feedback to improve accessibility may be sent via
-                <a class="btn-link2" href="/Contact">Contact Me</a>.
+                <a class="btn-link2" href="./contact.html">Contact Me</a>.
               </p>
               <a class="btn-link" href="#top">Back to Top</a>
             </li>
@@ -240,7 +247,7 @@
               <p class="text">
                 To exercise privacy rights (access, correction, deletion,
                 objection, or portability), contact the Foundation via
-                <a class="btn-link2" href="/Contact">Contact Me</a>.
+                <a class="btn-link2" href="./contact.html">Contact Me</a>.
               </p>
 
               <h4>* New Hampshire Privacy Rights *</h4>
@@ -254,14 +261,15 @@
               <h4>* Exercising Your New Hampshire Privacy Rights *</h4>
               <p class="text">
                 New Hampshire residents may contact
-                <a class="btn-link2" href="/Contact">Contact Me</a> to access,
-                correct, or request deletion of their personal information.
+                <a class="btn-link2" href="./contact.html">Contact Me</a> to
+                access, correct, or request deletion of their personal
+                information.
               </p>
 
               <h4>* Accessibility Support *</h4>
               <p class="text">
                 For assistance with privacy rights requests, contact
-                <a class="btn-link2" href="/Contact">Contact Me</a>.
+                <a class="btn-link2" href="./contact.html">Contact Me</a>.
               </p>
 
               <a class="btn-link" href="#top">Back to Top</a>
@@ -303,7 +311,7 @@
               </p>
               <p class="text">
                 For permissions or licensing inquiries, contact
-                <a class="btn-link2" href="/Contact">Contact Me</a>.
+                <a class="btn-link2" href="./contact.html">Contact Me</a>.
               </p>
               <a class="btn-link" href="#top">Back to Top</a>
             </li>
@@ -313,7 +321,7 @@
               <h2 class="section-title" id="S09" tabindex="-1">Contact</h2>
               <p class="text">
                 For questions regarding this privacy policy, please
-                <a class="btn-link2" href="/Contact">Contact Me</a>.
+                <a class="btn-link2" href="./contact.html">Contact Me</a>.
               </p>
               <a class="btn-link" href="#top">Back to Top</a>
             </li>
@@ -326,14 +334,8 @@
     <!-- Footer -->
     <div id="footer"></div>
 
-    <!-- Smooth scroll function for table of contents -->
-    <script>
-      function scrollToSection(event, id) {
-        event.preventDefault();
-        const element = document.getElementById(id);
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Load navbar and footer components -->
     <script>

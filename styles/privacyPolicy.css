@@ -1,3 +1,75 @@
-.body-page-layout {
-    background-color: purple;
+/* Base page layout */
+body.page-layout {
+  font-family: Arial, sans-serif;
+  background-color: rgb(246, 243, 235);
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* Section titles */
+.section {
+  color: rgb(0,0,0,);
+  margin-bottom: 10px;
+}
+
+/* Paragraph text */
+p, .text {
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+/* Main container areas */
+.main_container,
+.container {
+  background-color: rgba(52, 93, 47, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Anchor links */
+a {
+  color: rgb(52, 93, 47);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button-style link (Back to Top, etc.) */
+.btn-link {
+  color: rgb(52, 93, 47);
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Optional secondary link styling */
+.btn-link2 {
+  color: rgb(30, 70, 30);
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.btn-link2:hover {
+  text-decoration: none;
+}
+
+/* Ordered list spacing */
+ol {
+  padding-left: 1.2rem;
+}
+
+ol li {
+  margin-bottom: 1.5rem;
 }
