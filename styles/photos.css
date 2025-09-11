@@ -1,5 +1,5 @@
 /* photos.html */
-body {
+body.page-layout {
   background-color: rgb(246, 243, 235);
 }
 
@@ -191,7 +191,7 @@ main {
 }
 
 header {
-  margin-top: 150px;
+  margin-top: 60px;
 }
 
 .flyer-section {

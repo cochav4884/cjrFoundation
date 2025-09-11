@@ -1,3 +1,8 @@
+/* Resource.html */
+body.page-layout {
+  background-color: rgb(246, 243, 235);
+}
+
 /* ------------------- Resource List ------------------- */
 .resource-list {
   list-style-type: none;
