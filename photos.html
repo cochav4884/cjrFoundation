@@ -6,7 +6,7 @@
     <title>CJR Foundation || Photos & Flyers</title>
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="styles/photos.css" />
+    <link rel="stylesheet" href="./styles/photos.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/navbar.css" /> 
 
@@ -31,6 +31,15 @@
     <div id="navbar"></div>
 
     <!-- Main Content -->
+     <header>
+      <h1 class="cjr-title text-center">Charles J. Rousseau Charitable Foundation </h1>
+       <p class="text-center">Empowering our community through support and events.
+          <a class="btn btn-secondary text-center" href="https://next.waveapps.com/checkouts/5c74f0c4319a457f868ca2a9b2add951" target="_blank" rel="noopener">Donate Now</a>
+        </p>
+     </header>
+     
+     <h2 class="photo-title text-center">Photos</h2>
+
     <main>
       <!-- Carousel -->
       <div class="carousel-container">
@@ -65,14 +74,8 @@
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
-
-        <!-- Overlay container -->
-        <div class="overlay-container text-center">
-          <h1>CJR Foundation's Photo & Flyer Page</h1>
-          <p>Empowering our community through support and events.</p>
-          <a href="https://next.waveapps.com/checkouts/5c74f0c4319a457f868ca2a9b2add951" class="btn btn-secondary" target="_blank" rel="noopener">Donate Now</a>
         </div>
-      </div>
+
 
   <div class="container text-center flyer-section">
   <h1>Current Flyers</h1>
@@ -100,6 +103,21 @@ Even the cost of a cup of coffee can help us bring hope to the ET community. ☕
  Exit this image and click the donate button above!">
       <img src="images/donationFlyer.jpg" alt="Donation Flyer" class="flyer-img" />
     </div>
+  </div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" alt="Modal Flyer">
+  <div id="caption"></div>
+</div>
+
+<div class="container text-center flyer-section">
+  <h1>Past Flyers</h1>
+  <i>“Stay in the Loop! Our Flyers are Updated Regularly with the Latest Events and Opportunities.”</i>
+  <div class="flyer-grid">
+    
     <div class="flyer-card" data-title="Essential Tremors vs Parkinson's Disease" data-desc="Educating oneself is half the battle!">
       <img src="images/ET-vs-PD.png" alt="Father's Day Flyer" class="flyer-img" />
     </div>
@@ -107,7 +125,7 @@ Even the cost of a cup of coffee can help us bring hope to the ET community. ☕
       <img src="images/tremorParkinsons.jpg" alt="Fourth of July Flyer" class="flyer-img" />
     </div>
   </div>
-</div>
+
 
 <!-- Modal -->
 <div id="myModal" class="modal">

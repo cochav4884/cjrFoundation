@@ -1,50 +1,61 @@
-/* Navbar */
-navbar {
-  background-color: rgb(0,0,0);
+/* Navbar wrapper */
+nav {
+  background-color: rgb(0, 0, 0); /* fallback */
+  width: 100%;
 }
 
-/* Navbar container */
+/* Fixed navbar container */
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1020;
-  background-color: rgb(52, 93, 47);
+  background-color: rgb(52, 93, 47); /* primary navbar color */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  min-height: 60px; /* force consistent height */
-} 
+  min-height: 60px; /* consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Navbar brand alignment */
 .navbar-brand {
-  height: 60px;
   display: flex;
   align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 /* Logo size */
 .logo-img {
-  height: 40px; /* same as other pages */
+  height: 40px;
   width: auto;
   border-radius: 6px;
+  margin-right: 8px;
 }
 
 /* Navbar links */
 .navbar-nav .nav-link {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; /* reduce vertical padding for consistent height */
   font-size: 16px;
   color: rgb(246, 243, 235) !important;
-  transition: color 0.3s ease;
-  background-color: transparent;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
+/* Hover & active states */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: rgb(52, 93, 47) !important;
+  color: #f6f3eb; /* match footer link color */
   text-decoration: underline;
 }
 
-/* Add space for fixed navbar */
+/* Hamburger button */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add padding to body for fixed navbar */
 body.page-layout {
-  padding-top: 60px; /* adjust to match navbar height */
+  padding-top: 60px; /* match navbar height */
 }
