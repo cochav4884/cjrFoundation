@@ -19,9 +19,9 @@
     />
 
     <!-- Your custom CSS -->
-    <link rel="stylesheet" href="./styles/privacyPolicy.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/privacyPolicy.css" />
   </head>
 
   <body class="page-layout">
@@ -37,26 +37,22 @@
     <h2 class="section text-center">* Privacy Policy *</h2>
 
     <!-- Table of Contents -->
-    <div class="main_container">
-      <div class="container-mt-5">
+    <div class="main_container-fluid">
+      <div class="container-fluid mt-5">
         <div id="top" aria-label="Top of Page" tabindex="-1"></div>
         <h2 class="section text-dark text-center">* Table of Contents *</h2>
         <ul class="container">
-          <li>
-            <a class="btn-link" href="#S01">Privacy Policy</a>
-          </li>
-          <li>
-            <a class="btn-link" href="#S02">Coverage</a>
-          </li>
+          <li><a class="btn-link" href="#S01">Privacy Policy</a></li>
+          <li><a class="btn-link" href="#S02">Coverage</a></li>
           <li>
             <a class="btn-link" href="#S03"
               >Definitions of Types of Information</a
             >
           </li>
           <li>
-            <a class="btn-link" href="#S04">
-              Collection and Use of Personally Identifiable Information
-            </a>
+            <a class="btn-link" href="#S04"
+              >Collection and Use of Personally Identifiable Information</a
+            >
           </li>
           <li>
             <a class="btn-link" href="#S05">Website Accessibility Policy</a>
@@ -66,9 +62,7 @@
               >Do Not Sell My Personal Information</a
             >
           </li>
-          <li>
-            <a class="btn-link" href="#S07">Updates to this Policy</a>
-          </li>
+          <li><a class="btn-link" href="#S07">Updates to this Policy</a></li>
           <li>
             <a class="btn-link" href="#S08"
               >Intellectual Property and Content Ownership</a
@@ -340,12 +334,18 @@
     <!-- Load navbar and footer components -->
     <script>
       async function loadComponent(id, file) {
-        const response = await fetch(file);
-        document.getElementById(id).innerHTML = await response.text();
+        try {
+          const response = await fetch(file);
+          if (!response.ok) throw new Error("Failed to load " + file);
+          document.getElementById(id).innerHTML = await response.text();
+        } catch (error) {
+          console.error(error);
+        }
       }
 
-      loadComponent("navbar", "components/navbar.html");
-      loadComponent("footer", "components/footer.html");
+      // Use absolute paths (adjust if needed based on your project root)
+      loadComponent("navbar", "./components/navbar.html");
+      loadComponent("footer", "./components/footer.html");
     </script>
   </body>
 </html>
