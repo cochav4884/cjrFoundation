@@ -1,3 +1,8 @@
+/* Navbar */
+navbar {
+  background-color: rgb(0,0,0);
+}
+
 /* Navbar container */
 #navbar {
   position: fixed;
@@ -7,7 +12,7 @@
   background-color: rgb(52, 93, 47);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   min-height: 60px; /* force consistent height */
-}
+} 
 
 /* Navbar brand alignment */
 .navbar-brand {
@@ -36,6 +41,7 @@
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: rgb(52, 93, 47) !important;
+  text-decoration: underline;
 }
 
 /* Add space for fixed navbar */
