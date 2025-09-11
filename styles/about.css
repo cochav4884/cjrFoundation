@@ -37,7 +37,7 @@
   width: 100%;
   box-sizing: border-box;
   margin: 10px;
-  box-shadow: 2px 2px 4px rgba(0,0,0);
+  box-shadow: 2px 2px 4px rgba(255, 193, 7);
   text-align: center;
   padding: 0; /* remove padding so image fills top fully */
   border-radius: 10px;

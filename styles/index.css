@@ -34,13 +34,6 @@ footer {
 }
 
 
-main {
-  flex: 1;                  /* grows to push footer down */
-  padding-top: 60px;        /* space for fixed navbar */
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 /* Images */
 img {
   max-width: 50px;
@@ -83,7 +76,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0);
+  box-shadow: 2px 2px 4px rgba(255, 193, 7);
   overflow: hidden;
 }
 

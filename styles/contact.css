@@ -40,7 +40,6 @@ main {
   display: flex; /* centers overlay */
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
 }
 
 /* Overlay container */
@@ -48,93 +47,23 @@ main {
   background-color: rgba(52, 93, 47, 0.5);
   padding: 30px;
   border-radius: 8px;
-  max-width: 600px;
+  max-width: 1100px;
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  opacity: 0.95;
-  color: rgb(246, 243, 235);
-  text-align: left; /* keeps paragraphs aligned */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center; /* keeps paragraphs aligned */
 }
 
 .overlay-container h1 {
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  font-size: 48px;
 }
 
 .overlay-container p {
   margin-bottom: 1em;
-}
-
-.overlay-container a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-main {
-  flex: 1;
-  margin-top: 60px; /* adjust for navbar */
-}
-
-/* Background section */
-.bg-img {
-  background-image: url("/images/cjrCharitableFoundationLogo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh; /* make it fill screen */
-  display: flex; /* so overlay can center */
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-}
-
-/* Overlay container */
-.overlay-container {
-  background-color: rgba(52, 93, 47, 0.6);
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  color: rgb(246, 243, 235); /* ensure readable text */
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-  margin-top: 30px; /* space for fixed navbar */
-  box-sizing: border-box;
-}
-
-/* Overlay container */
-.overlay-container {
-  background-color: rgb(52, 93, 47, 0.6);
-  padding: 30px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto; /* center horizontally */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  opacity: 0.95;
-}
-
-.overlay-container h1 {
-  margin-top: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.overlay-container p {
-  margin-bottom: 1em;
-}
-
-.overlay-container a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 /* Optional: background image for the section */
