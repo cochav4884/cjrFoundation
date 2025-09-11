@@ -15,7 +15,7 @@ main {
 .photo-title
 {
   font-size: xx-large;
-  
+
 }
 
 .carousel-container {
@@ -95,7 +95,7 @@ main {
 .flyer-section {
   margin: 40px auto;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1200px; 
 }
 
 .flyer-grid {
@@ -104,6 +104,8 @@ main {
   gap: 20px;
   justify-content: center;
   margin-top: 50px;
+  height: auto;
+  background-color: rgba(52, 93, 47, 0.5);
 }
 
 .flyer-card {
@@ -188,14 +190,10 @@ main {
   }
 }
 
-#footer .container {
-  max-width: 100%;
-  padding: 0 20px;
-}
-
 header {
   margin-top: 150px;
 }
 
-
-
+.flyer-section {
+  margin-top: 60px;
+}
