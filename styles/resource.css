@@ -138,3 +138,7 @@ main {
     font-size: 1rem;
   }
 }
+
+.learn-more {
+  text-decoration: none;
+}
