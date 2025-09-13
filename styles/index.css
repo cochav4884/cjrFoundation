@@ -19,7 +19,6 @@ main {
   flex: 1;             /* fill remaining space */
   padding-top: 60px;   /* space for fixed navbar */
   box-sizing: border-box; /* include padding in height */
-  overflow-y: auto;    /* allow scrolling inside main if content is large */
 }
 
 .navbar-custom {
@@ -107,31 +106,32 @@ img {
   box-shadow: 2px 2px 4px rgb(0,0,0);
 }
 
-/* Intro Section */
-.intro-section {
-  margin-bottom: 0;
-}
-
-.intro-picture {
-  background-color: rgba(52, 93, 47, 0.6);
-  padding: 30px;
-  height: 500px;
-  width: 100%;
+.hero-img {
+  display: block;             /* ensures it’s block-level */
+  width: 100%;                /* fill width of container */
+  max-width: 1200px;          /* optional max size on desktop */
+  height: auto;               /* maintain aspect ratio */
+  margin: 50px auto 70px;     /* top, horizontal center, bottom */
+  border: 5px solid rgba(52, 93, 47, 0.6); /* custom border */
   border-radius: 10px;
-  margin-bottom: 50px;
-
-  display: flex;               /* make container flex */
-  justify-content: center;     /* center horizontally */
-  align-items: center;         /* center vertically (optional) */
-}
-
-.intro-picture .img-fluid {
-  max-height: 400px;
-  width: 80%;
-  object-fit: cover;
   box-shadow: 2px 2px 4px rgb(0,0,0);
-  margin: 0;                   /* remove extra margins */
 }
+
+
+
+/* Responsive adjustments for the hero image */
+@media (max-width: 768px) {
+  .hero-img {
+    margin: 40px auto 60px;   /* adjust spacing for tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    margin: 30px auto 50px;   /* adjust spacing for phones */
+  }
+}
+
 
 /* Overlay container */
 .overlay-container {
@@ -196,4 +196,3 @@ h1 {
 .btn {
   box-shadow: 2px 2px 4px rgb(0,0,0);
 }
-

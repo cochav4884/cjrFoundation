@@ -37,13 +37,12 @@
       <section class="intro-section container my-5 text-center">
         <h1 class="mb-3">Charles J. Rousseau Charitable Foundation</h1>
 
-        <div class="intro-picture mt-4">
-          <img
-            src="images/landingPageImage2.jpg"
-            alt="CJR Foundation Team"
-            class="img-fluid rounded shadow"
-          />
-        </div>
+        <img
+          src="images/landingPageImage2.jpg"
+          alt="CJR Foundation Team"
+          class="hero-img rounded shadow"
+        />
+
         <p class="lead">
           Empowering & aiding essential tremor patients through new treatments,
           financial assistance & awareness.
@@ -127,6 +126,8 @@
       </div>
     </main>
 
+    <!-- Footer -->
+    <div id="footer"></div>
     <script>
       async function loadComponent(id, file) {
         const response = await fetch(file);
@@ -136,8 +137,5 @@
       loadComponent("navbar", "components/navbar.html");
       loadComponent("footer", "components/footer.html");
     </script>
-
-    <!-- Footer -->
-    <div id="footer"></div>
   </body>
 </html>
