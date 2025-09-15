@@ -11,8 +11,27 @@
   margin-top: 60px;
 }
 
+/* ================================ */
+/* About Page Title Spacing         */
+/* ================================ */
+
+/* Default spacing for desktop */
 .main-content h1 {
-  margin-top: 60px;
+  margin-top: 40px; /* adjust as needed for large screens */
+}
+
+/* Medium screens (tablets, smaller desktops) */
+@media (max-width: 992px) {
+  .main-content h1 {
+    margin-top: 60px;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 600px) {
+  .main-content h1 {
+    margin-top: 100px; /* pushes the title down from the navbar */
+  }
 }
 
 /* Text Section */
@@ -52,11 +71,10 @@
 /* Profile Images - fixed aspect ratio always */
 .main-content .profile-row .card img.profile-img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* always square for clean grid */
+  aspect-ratio: 1 / 1; /* always square for clean grid */
   object-fit: cover;
   display: block;
 }
-
 
 /* Card Content */
 .main-content .profile-row .card h1,
@@ -156,7 +174,7 @@
   }
 
   .main-content .profile-row .card img.profile-img {
-    aspect-ratio: 16 / 10;  /* adjust ratio for mid-size screens */
+    aspect-ratio: 16 / 10; /* adjust ratio for mid-size screens */
   }
 
   .main-content .image-section .cjr.img-fluid {
