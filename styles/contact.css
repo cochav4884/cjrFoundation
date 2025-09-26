@@ -1,58 +1,109 @@
-/* Contact Page Styles */
+/* ================================ */
+/* Contact Page Styles               */
+/* ================================ */
 
+/* Reset body and setup full-screen flex */
 body.page-layout {
-  background-image: url("../images/dadAndGrandpa.jpg");
-  background-color: rgb(246, 243, 235);
-  background-size: auto; /* keep natural size */
-  background-repeat: no-repeat; /* no duplicates */
-  background-position: center; /* centered */
-  min-height: 100vh; /* take full screen height */
-
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* vertical center */
-  justify-content: center; /* horizontal center */
+  font-family: Arial, sans-serif;
 }
 
+/* Full-screen background image behind content */
+body.page-layout::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/dadAndGrandpa.jpg");
+  background-size: cover;      /* fills screen top to bottom */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;                 /* behind all content */
+}
+
+/* Main content container centers overlay */
 main {
   flex: 1;
-  margin-top: 60px; /* space for navbar */
+  display: flex;
+  justify-content: center;     /* horizontal center */
+  align-items: center;         /* vertical center */
+  padding: 20px;               /* optional padding for smaller screens */
   box-sizing: border-box;
 }
 
 /* Overlay container */
 .overlay-container {
-  background-color: rgba(52, 93, 47, 0.5);
-  padding: 30px;
+  background-color: rgba(52, 93, 47, 0.6);
+  padding: 40px;
   border-radius: 8px;
-  max-width: 1100px;
+  max-width: 900px;
   width: 100%;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0);
-  color: rgb(255, 255, 255);
-  text-align: center; /* keeps paragraphs aligned */
+  color: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Headings inside overlay */
 .overlay-container h1 {
   margin-top: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
   font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
+.overlay-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph spacing inside overlay */
 .overlay-container p {
   margin-bottom: 1em;
+  line-height: 1.5;
 }
 
-/* Optional: background image for the section */
-.bg-img {
-  background-image: url("../images/contact-background.jpg"); /* optional image */
-  background-size: cover;
-  background-position: center;
-  padding: 60px 20px;
+/* ================================ */
+/* Responsive Adjustments            */
+/* ================================ */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .overlay-container {
+    padding: 30px;
+  }
+
+  .overlay-container h1 {
+    font-size: 36px;
+  }
 }
 
-/* footer.css */
+/* Small screens (mobiles) */
+@media (max-width: 480px) {
+  .overlay-container {
+    padding: 20px;
+  }
+
+  .overlay-container h1 {
+    font-size: 28px;
+  }
+
+  .overlay-container h2 {
+    font-size: 20px;
+  }
+
+  .overlay-container p {
+    font-size: 16px;
+  }
+}
+
+/* ================================ */
+/* Footer Styles (footer.css)       */
+/* ================================ */
 #footer {
   width: 100%;              /* full width */
   background-color: #111;   /* dark background */

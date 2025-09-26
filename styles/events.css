@@ -3,8 +3,8 @@ body.page-layout {
   background-color: rgb(246, 243, 235);
 }
 
-main {
-  padding: 20px;
+header {
+  padding: 40px;
   margin-top: 60px;
 }
 

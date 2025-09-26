@@ -54,8 +54,3 @@ nav {
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.1);
 }
-
-/* Add padding to body for fixed navbar */
-body.page-layout {
-  padding-top: 60px; /* match navbar height */
-}

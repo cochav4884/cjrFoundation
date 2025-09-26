@@ -15,9 +15,13 @@ body.page-layout {
   background-color: rgb(246, 243, 235);
 }
 
+section {
+  margin-top: 60px;
+  padding: 40px;
+}
+
 main {
-  flex: 1;             /* fill remaining space */
-  padding-top: 60px;   /* space for fixed navbar */
+  flex: 1;      /* fill remaining space */
   box-sizing: border-box; /* include padding in height */
 }
 
