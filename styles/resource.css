@@ -3,6 +3,10 @@ body.page-layout {
   background-color: rgb(246, 243, 235);
 }
 
+h1 {
+  padding: 40px;
+}
+
 /* ------------------- Resource List ------------------- */
 .resource-list {
   list-style-type: none;
