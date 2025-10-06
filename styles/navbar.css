@@ -10,19 +10,19 @@ nav.navbar {
 /* Keep brand and toggler on one line */
 .navbar .container-fluid {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* prevent brand + toggler from breaking lines */
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
 }
 
-#navbar, .navbar {
+#navbar,
+.navbar {
   z-index: 1020;
   position: fixed;
   top: 0;
   width: 100%;
 }
-
 
 /* ===========================
    BRAND
@@ -30,13 +30,15 @@ nav.navbar {
 .navbar-brand {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* allow text to wrap under logo */
+  flex-wrap: nowrap; /* prevent text from wrapping under logo */
   font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
   color: rgb(246, 243, 235);
-  max-width: 70%; /* ensures toggler remains visible */
-  white-space: normal; /* allow wrapping */
+  max-width: calc(100% - 60px); /* leaves room for toggler */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* keep on one line */
 }
 
 /* Logo */
@@ -45,6 +47,7 @@ nav.navbar {
   width: auto;
   border-radius: 6px;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 /* ===========================
@@ -67,8 +70,9 @@ nav.navbar {
    TOGGLER
    =========================== */
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
   margin-left: auto;
+  flex-shrink: 0;
   z-index: 2;
 }
 
@@ -78,20 +82,21 @@ nav.navbar {
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1rem;
-    max-width: 65%;
+    max-width: calc(100% - 55px);
+  }
+  .logo-img {
+    height: 34px;
+    margin-right: 6px;
   }
 }
 
 @media (max-width: 576px) {
   .navbar-brand {
-    flex-direction: column; /* logo above text */
-    align-items: flex-start;
-    text-align: left;
-    max-width: 100%;
+    font-size: 0.95rem;
+    max-width: calc(100% - 55px);
   }
-
   .logo-img {
-    margin-right: 0;
-    margin-bottom: 4px;
+    height: 30px;
+    margin-right: 5px;
   }
 }
