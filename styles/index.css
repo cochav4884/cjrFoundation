@@ -13,7 +13,7 @@ body.page-layout {
   flex-direction: column;
   min-height: 100vh;
   background-color: rgb(246, 243, 235);
-}
+  padding-top: 60px; /* space for fixed navbar */}
 
 section {
   margin-top: 60px;
@@ -166,8 +166,6 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  padding: 40px;
-  margin-top: 20px;
 }
 
 

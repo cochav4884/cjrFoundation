@@ -1,38 +1,45 @@
-/* Navbar wrapper */
-nav {
-  background-color: rgb(0, 0, 0); /* fallback */
+/* ===========================
+   NAVBAR BASE STYLING
+   =========================== */
+nav.navbar {
+  background-color: rgb(0, 0, 0);
   width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Fixed navbar container */
-#navbar {
+/* Keep brand and toggler on one line */
+.navbar .container-fluid {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+#navbar, .navbar {
+  z-index: 1020;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1020;
-  background-color: rgb(0, 0, 0); /* primary navbar color */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  min-height: 60px; /* consistent height */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* push brand left, toggler right */
-  padding: 0 1rem; /* add breathing room */
 }
 
-/* Navbar brand alignment */
+
+/* ===========================
+   BRAND
+   =========================== */
 .navbar-brand {
   display: flex;
-  flex-wrap: wrap; /* allow text to wrap on small screens */
   align-items: center;
+  flex-wrap: wrap; /* allow text to wrap under logo */
   font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  white-space: normal; /* allow wrapping */
   color: rgb(246, 243, 235);
-  max-width: 70%; /* prevent overflow into toggler */
+  max-width: 70%; /* ensures toggler remains visible */
+  white-space: normal; /* allow wrapping */
 }
 
-/* Logo size */
+/* Logo */
 .logo-img {
   height: 40px;
   width: auto;
@@ -40,7 +47,9 @@ nav {
   margin-right: 8px;
 }
 
-/* Navbar links */
+/* ===========================
+   NAV LINKS
+   =========================== */
 .navbar-nav .nav-link {
   font-size: 16px;
   color: rgb(246, 243, 235) !important;
@@ -48,21 +57,24 @@ nav {
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-/* Hover & active states */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: #f6f3eb; /* match footer link color */
+  color: #f6f3eb;
   text-decoration: underline;
 }
 
-/* Hamburger button */
+/* ===========================
+   TOGGLER
+   =========================== */
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.1);
-  margin-left: auto; /* ensures it stays on the far right */
+  margin-left: auto;
   z-index: 2;
 }
 
-/* Small screen adjustments */
+/* ===========================
+   RESPONSIVE TWEAKS
+   =========================== */
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1rem;
@@ -72,13 +84,14 @@ nav {
 
 @media (max-width: 576px) {
   .navbar-brand {
-    flex-direction: column; /* stack logo + title */
+    flex-direction: column; /* logo above text */
     align-items: flex-start;
     text-align: left;
     max-width: 100%;
   }
 
   .logo-img {
+    margin-right: 0;
     margin-bottom: 4px;
   }
 }

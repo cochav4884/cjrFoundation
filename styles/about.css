@@ -6,10 +6,13 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 40px;
+  padding-top: 120px; /* actual space for navbar */
+  position: relative;
+  z-index: 1;
   background-color: rgb(246, 243, 235);
-  margin-top: 60px; /* space for navbar */
+  margin-top: 0; /* remove the extra margin */
 }
+
 
 h1 {
   padding: 40px;
