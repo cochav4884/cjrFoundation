@@ -1,4 +1,10 @@
 /* Resource.html */
+/* Prevent content from hiding under fixed navbar */
+body {
+  padding-top: 70px; /* adjust if your navbar is taller */
+}
+
+
 body.page-layout {
   background-color: rgb(246, 243, 235);
 }

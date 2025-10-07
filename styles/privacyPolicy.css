@@ -1,3 +1,9 @@
+/* Prevent content from hiding under fixed navbar */
+body {
+  padding-top: 70px; /* adjust if your navbar is taller */
+}
+
+
 /* Base page layout */
 body.page-layout {
   font-family: Arial, sans-serif;

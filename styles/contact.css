@@ -2,6 +2,12 @@
 /* Contact Page Styles               */
 /* ================================ */
 
+/* Prevent content from hiding under fixed navbar */
+body {
+  padding-top: 70px; /* adjust if your navbar is taller */
+}
+
+
 /* Reset body and setup full-screen flex */
 body.page-layout {
   margin: 0;

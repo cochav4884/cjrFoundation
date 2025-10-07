@@ -2,6 +2,12 @@
 /* About Page Styles (Scoped)       */
 /* ================================ */
 
+/* Prevent content from hiding under fixed navbar */
+body {
+  padding-top: 70px; /* adjust if your navbar is taller */
+}
+
+
 .main-content {
   display: flex;
   flex-direction: column;
